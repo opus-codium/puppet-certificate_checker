@@ -2,7 +2,7 @@ class certificate_checker (
   String $logfile = '/var/log/certificate-checker.jsonl',
   String $ensure = 'installed',
 
-  $hour = '*/8',
+  $hour = '*/4',
   $minute = fqdn_rand(60),
   $month = undef,
   $monthday = undef,
