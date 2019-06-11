@@ -1,0 +1,3 @@
+---
+certificate_checker::package_provider: "gem"
+certificate_checker::certificate_checker_path: "/usr/local/bin/certificate-checker"
