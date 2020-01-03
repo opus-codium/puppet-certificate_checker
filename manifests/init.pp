@@ -1,12 +1,23 @@
+# @summary Configure certificate_checker
+#
+# @param logfile Logfile to store certificates status
+# @param ensure
+# @param hour
+# @param minute
+# @param month
+# @param monthday
+# @param weekday
+# @param user User to check certificates status as
+# @param group Group to check certificates status as
 class certificate_checker (
   String $logfile = '/var/log/certificate-checker.jsonl',
   String $ensure = 'installed',
 
-  $hour = '*/4',
-  $minute = fqdn_rand(60),
-  $month = undef,
-  $monthday = undef,
-  $weekday = undef,
+  Any $hour = '*/4',
+  Any $minute = fqdn_rand(60),
+  Any $month = undef,
+  Any $monthday = undef,
+  Any $weekday = undef,
 
   Optional[String] $user = undef,
   Optional[String] $group = undef,
