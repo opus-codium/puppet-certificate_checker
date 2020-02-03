@@ -16,7 +16,7 @@ class certificate_checker (
   String                    $certificate_checker_path,
 
   String $logfile = '/var/log/certificate-checker.jsonl',
-  String $ensure = 'installed',
+  String $ensure = '1.2.0',
 
   Any $hour = '*/4',
   Any $minute = fqdn_rand(60),
@@ -42,7 +42,7 @@ class certificate_checker (
   $args = certificate_checker::watched_paths().join(' ')
 
   cron { 'certificate-checker':
-    command  => "${certificate_checker_path} -o ${logfile} ${args}",
+    command  => "${certificate_checker_path} --output=${logfile} --ignore-nonexistent ${args}",
 
     hour     => $hour,
     minute   => $minute,
