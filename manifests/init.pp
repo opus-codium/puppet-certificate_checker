@@ -4,6 +4,7 @@
 # @param certificate_checker_path
 # @param logfile Logfile to store certificates status
 # @param ensure
+# @param ignore_nonexistent Ignore non-existent files. Requires certificate-checker 1.2+
 # @param hour
 # @param minute
 # @param month
@@ -16,7 +17,9 @@ class certificate_checker (
   String                    $certificate_checker_path,
 
   String $logfile = '/var/log/certificate-checker.jsonl',
-  String $ensure = '1.2.0',
+  String $ensure = 'installed',
+
+  Boolean $ignore_nonexistent = false,
 
   Any $hour = '*/4',
   Any $minute = fqdn_rand(60),
@@ -41,8 +44,17 @@ class certificate_checker (
 
   $args = certificate_checker::watched_paths().join(' ')
 
+  $command = [
+    $certificate_checker_path,
+    "--output=${logfile}",
+    if $ignore_nonexistent {
+      '--ignore-nonexistent'
+    },
+    $args,
+  ].filter |$x| { $x =~ NotUndef }.join(' ')
+
   cron { 'certificate-checker':
-    command  => "${certificate_checker_path} --output=${logfile} --ignore-nonexistent ${args}",
+    command  => $command,
 
     hour     => $hour,
     minute   => $minute,
