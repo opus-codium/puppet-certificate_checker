@@ -11,6 +11,9 @@ Metrics/BlockLength:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
+Style/TrailingCommaInArrayLiteral:
+  Description: Be consistent with Puppet's style
+  EnforcedStyleForMultiline: comma
 Style/TrailingCommaInHashLiteral:
   Description: Be consistent with Puppet's style
   EnforcedStyleForMultiline: comma
