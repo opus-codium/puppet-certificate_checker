@@ -1,6 +1,6 @@
 {
   "name": "opuscodium-certificate_checker",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Opus Codium",
   "summary": "Installs, configures, and manages Certificate checker",
   "license": "Apache-2.0",
@@ -8,7 +8,10 @@
   "project_page": "https://github.com/opus-codium/puppet-certificate_checker",
   "issues_url": "https://github.com/opus-codium/puppet-certificate_checker/pulls",
   "dependencies": [
-    { "name": "puppetlabs/stdlib", "version_requirement": ">= 4.13.0 < 7" }
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.13.0 < 7"
+    }
   ],
   "data_provider": "hiera",
   "operatingsystem_support": [
