@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'certificate_checker' do
-  before(:each) do
+  before do
     Puppet::Parser::Functions.newfunction(:puppetdb_query, type: :rvalue) do |_args|
       [
         {
