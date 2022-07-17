@@ -1,0 +1,3 @@
+---
+certificate_checker::package_provider: "puppet_gem"
+certificate_checker::certificate_checker_path: "/opt/puppetlabs/puppet/bin/certificate-checker"
