@@ -1,6 +1,6 @@
 {
   "name": "opuscodium-certificate_checker",
-  "version": "3.0.0",
+  "version": "3.0.1-rc0",
   "author": "Opus Codium",
   "summary": "Installs, configures, and manages Certificate checker",
   "license": "Apache-2.0",
