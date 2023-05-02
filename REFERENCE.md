@@ -10,11 +10,11 @@
 
 ### Defined types
 
-* [`certificate_checker::watch`](#certificate_checkerwatch): Add certificates to monitor
+* [`certificate_checker::watch`](#certificate_checker--watch): Add certificates to monitor
 
 ### Functions
 
-* [`certificate_checker::watched_paths`](#certificate_checkerwatched_paths): Extract watched paths from PuppetDB
+* [`certificate_checker::watched_paths`](#certificate_checker--watched_paths): Extract watched paths from PuppetDB
 
 ## Classes
 
@@ -26,32 +26,32 @@ Configure certificate_checker
 
 The following parameters are available in the `certificate_checker` class:
 
-* [`package_provider`](#package_provider)
-* [`certificate_checker_path`](#certificate_checker_path)
-* [`logfile`](#logfile)
-* [`ensure`](#ensure)
-* [`ignore_nonexistent`](#ignore_nonexistent)
-* [`hour`](#hour)
-* [`minute`](#minute)
-* [`month`](#month)
-* [`monthday`](#monthday)
-* [`weekday`](#weekday)
-* [`user`](#user)
-* [`group`](#group)
+* [`package_provider`](#-certificate_checker--package_provider)
+* [`certificate_checker_path`](#-certificate_checker--certificate_checker_path)
+* [`logfile`](#-certificate_checker--logfile)
+* [`ensure`](#-certificate_checker--ensure)
+* [`ignore_nonexistent`](#-certificate_checker--ignore_nonexistent)
+* [`hour`](#-certificate_checker--hour)
+* [`minute`](#-certificate_checker--minute)
+* [`month`](#-certificate_checker--month)
+* [`monthday`](#-certificate_checker--monthday)
+* [`weekday`](#-certificate_checker--weekday)
+* [`user`](#-certificate_checker--user)
+* [`group`](#-certificate_checker--group)
 
-##### <a name="package_provider"></a>`package_provider`
+##### <a name="-certificate_checker--package_provider"></a>`package_provider`
 
 Data type: `Enum['gem', 'puppet_gem']`
 
 
 
-##### <a name="certificate_checker_path"></a>`certificate_checker_path`
+##### <a name="-certificate_checker--certificate_checker_path"></a>`certificate_checker_path`
 
 Data type: `String`
 
 
 
-##### <a name="logfile"></a>`logfile`
+##### <a name="-certificate_checker--logfile"></a>`logfile`
 
 Data type: `String`
 
@@ -59,7 +59,7 @@ Logfile to store certificates status
 
 Default value: `'/var/log/certificate-checker.jsonl'`
 
-##### <a name="ensure"></a>`ensure`
+##### <a name="-certificate_checker--ensure"></a>`ensure`
 
 Data type: `String`
 
@@ -67,15 +67,15 @@ Data type: `String`
 
 Default value: `'installed'`
 
-##### <a name="ignore_nonexistent"></a>`ignore_nonexistent`
+##### <a name="-certificate_checker--ignore_nonexistent"></a>`ignore_nonexistent`
 
 Data type: `Boolean`
 
 Ignore non-existent files. Requires certificate-checker 1.2+
 
-Default value: ``false``
+Default value: `false`
 
-##### <a name="hour"></a>`hour`
+##### <a name="-certificate_checker--hour"></a>`hour`
 
 Data type: `Any`
 
@@ -83,7 +83,7 @@ Data type: `Any`
 
 Default value: `'*/4'`
 
-##### <a name="minute"></a>`minute`
+##### <a name="-certificate_checker--minute"></a>`minute`
 
 Data type: `Any`
 
@@ -91,49 +91,49 @@ Data type: `Any`
 
 Default value: `fqdn_rand(60)`
 
-##### <a name="month"></a>`month`
+##### <a name="-certificate_checker--month"></a>`month`
 
 Data type: `Any`
 
 
 
-Default value: ``undef``
+Default value: `undef`
 
-##### <a name="monthday"></a>`monthday`
-
-Data type: `Any`
-
-
-
-Default value: ``undef``
-
-##### <a name="weekday"></a>`weekday`
+##### <a name="-certificate_checker--monthday"></a>`monthday`
 
 Data type: `Any`
 
 
 
-Default value: ``undef``
+Default value: `undef`
 
-##### <a name="user"></a>`user`
+##### <a name="-certificate_checker--weekday"></a>`weekday`
+
+Data type: `Any`
+
+
+
+Default value: `undef`
+
+##### <a name="-certificate_checker--user"></a>`user`
 
 Data type: `Optional[String]`
 
 User to check certificates status as
 
-Default value: ``undef``
+Default value: `undef`
 
-##### <a name="group"></a>`group`
+##### <a name="-certificate_checker--group"></a>`group`
 
 Data type: `Optional[String]`
 
 Group to check certificates status as
 
-Default value: ``undef``
+Default value: `undef`
 
 ## Defined types
 
-### <a name="certificate_checkerwatch"></a>`certificate_checker::watch`
+### <a name="certificate_checker--watch"></a>`certificate_checker::watch`
 
 Add certificates to monitor
 
@@ -141,9 +141,9 @@ Add certificates to monitor
 
 The following parameters are available in the `certificate_checker::watch` defined type:
 
-* [`paths`](#paths)
+* [`paths`](#-certificate_checker--watch--paths)
 
-##### <a name="paths"></a>`paths`
+##### <a name="-certificate_checker--watch--paths"></a>`paths`
 
 Data type: `Variant[Array[Stdlib::Absolutepath], Stdlib::Absolutepath]`
 
@@ -153,7 +153,7 @@ Default value: `$title`
 
 ## Functions
 
-### <a name="certificate_checkerwatched_paths"></a>`certificate_checker::watched_paths`
+### <a name="certificate_checker--watched_paths"></a>`certificate_checker::watched_paths`
 
 Type: Puppet Language
 
