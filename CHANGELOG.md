@@ -1,13 +1,20 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+Each new release typically also includes the latest modulesync defaults.
+These should not affect the functionality of the module.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [v3.1.0](https://github.com/opus-codium/puppet-certificate_checker/tree/v3.1.0) (2023-06-14)
 
-## [3.0.0](https://github.com/opus-codium/puppet-certificate_checker/tree/3.0.0) (2022-07-19)
+[Full Changelog](https://github.com/opus-codium/puppet-certificate_checker/compare/v3.0.0...v3.1.0)
 
-[Full Changelog](https://github.com/opus-codium/puppet-certificate_checker/compare/2.0.0...3.0.0)
+**Implemented enhancements:**
+
+- Allow puppetlabs-stdlib 9.x [\#29](https://github.com/opus-codium/puppet-certificate_checker/pull/29) ([smortex](https://github.com/smortex))
+
+## [v3.0.0](https://github.com/opus-codium/puppet-certificate_checker/tree/v3.0.0) (2022-07-19)
+
+[Full Changelog](https://github.com/opus-codium/puppet-certificate_checker/compare/2.0.0...v3.0.0)
 
 **Breaking changes:**
 
@@ -41,6 +48,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Remove explicit data\_provider from metadata.json [\#14](https://github.com/opus-codium/puppet-certificate_checker/pull/14) ([smortex](https://github.com/smortex))
 
+**Merged pull requests:**
+
+- Add acceptance tests [\#16](https://github.com/opus-codium/puppet-certificate_checker/pull/16) ([smortex](https://github.com/smortex))
+
 ## [1.0.0](https://github.com/opus-codium/puppet-certificate_checker/tree/1.0.0) (2020-12-21)
 
 [Full Changelog](https://github.com/opus-codium/puppet-certificate_checker/compare/8ae8f8cedbaf77e1a99098ae078626400c4171bc...1.0.0)
@@ -49,6 +60,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Ignore nonexistent files [\#6](https://github.com/opus-codium/puppet-certificate_checker/pull/6) ([smortex](https://github.com/smortex))
 - Make the module RedHat compatible [\#2](https://github.com/opus-codium/puppet-certificate_checker/pull/2) ([smortex](https://github.com/smortex))
+
+**Merged pull requests:**
+
+- Add a GitHub action for publishing to the forge [\#10](https://github.com/opus-codium/puppet-certificate_checker/pull/10) ([smortex](https://github.com/smortex))
+- Switch from Travis CI to GitHub Actions [\#9](https://github.com/opus-codium/puppet-certificate_checker/pull/9) ([neomilium](https://github.com/neomilium))
 
 
 
